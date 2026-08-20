@@ -35,3 +35,17 @@
     stroke: #ffd700;
     stroke-width: 6px;
 }
+
+@media screen and (max-width: 1200px) {
+    .logo-container {
+        position: relative;
+        width: 260px;
+        height: 320px;
+        margin: 30px auto 0;
+        right: auto;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        opacity: 1 !important;
+    }
+}

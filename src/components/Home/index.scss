@@ -1,5 +1,4 @@
 .home-page {
-
     .text-zone {
         position: absolute;
         left: 10%;
@@ -11,8 +10,8 @@
 
     h1 {
         color: #fff;
-        font-size: 56px;
-        line-height: 58px;
+        font-size: clamp(32px, 5.5vw, 56px);
+        line-height: clamp(36px, 6vw, 58px);
         letter-spacing: 1px;
         margin: 0;
         font-family: 'Coolvetica';
@@ -41,8 +40,8 @@
             opacity: 0.6;
         }
         img {
-            width: 36px;
-            margin-left: 14px;
+            width: clamp(24px, 4vw, 36px);
+            margin-left: 10px;
             margin-right: 2px;
             vertical-align: -3px;
             opacity: 0;
@@ -56,7 +55,7 @@
         color: #8d8d8d;
         margin-top: 24px;
         font-weight: 400;
-        font-size: 13px;
+        font-size: clamp(11px, 2vw, 13px);
         font-family: sans-serif;
         letter-spacing: 4px;
         animation: fadeIn 1s 1.8s backwards;
@@ -75,6 +74,8 @@
         float: left;
         animation: fadeIn 1s 1.8s backwards;
         white-space: nowrap;
+        border-radius: 4px;
+        transition: all 0.3s ease;
 
         &:hover {
             background: #ffd700;
@@ -83,3 +84,20 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .home-page {
+        .text-zone {
+            position: initial;
+            transform: none;
+            width: 100%;
+            display: block;
+            padding: 20px 10px;
+            box-sizing: border-box;
+
+            h1::before {
+                margin-top: -25px;
+                left: 0;
+            }
+        }
+    }
+}

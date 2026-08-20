@@ -28,48 +28,39 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        align-items: center;
         box-shadow: 0 0 20px 0px lightyellow;
     }
 
-    .face1 {
-        transform: translateZ(100px);
-    }
-    .face2 {
-        transform: rotateY(90deg) translateZ(100px);
-    }
-    .face3 {
-        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-    }
-    .face4 {
-        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face5 {
-        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face6 {
-        transform: rotateX(-90deg) translateZ(100px);
-    }
+    .face1 { transform: translateZ(100px); }
+    .face2 { transform: rotateY(90deg) translateZ(100px); }
+    .face3 { transform: rotateY(90deg) rotateX(90deg) translateZ(100px); }
+    .face4 { transform: rotateY(180deg) rotateZ(90deg) translateZ(100px); }
+    .face5 { transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px); }
+    .face6 { transform: rotateX(-90deg) translateZ(100px); }
 }
 
 @keyframes spincube {
-    from, 
-    to {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    from, to { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16% { transform: rotateY(-90deg) rotateZ(90deg); }
+    33% { transform: rotateY(-90deg) rotateX(90deg); }
+    50% { transform: rotateY(-180deg) rotateZ(90deg); }
+    66% { transform: rotateY(-270deg) rotateX(90deg); }
+    83% { transform: rotateX(90deg); }
+}
+
+@media screen and (max-width: 1200px) {
+    .stage-cube-cont {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        padding-top: 50px;
+        margin: 40px auto 60px;
+        overflow: visible;
+        right: auto;
+        top: auto;
     }
-    16% {
-        transform: rotateY(-90deg) rotateZ(90deg);
-    }
-    33% {
-        transform: rotateY(-90deg) rotateX(90deg);
-    }
-    50% {
-        transform: rotateY(-180deg) rotateZ(90deg);
-    }
-    66% {
-        transform: rotateY(-270deg) rotateX(90deg);
-    }
-    83% {
-        transform: rotateX(90deg);
+
+    .cubespinner {
+        margin-left: calc(50% - 100px);
     }
 }
